@@ -13490,3 +13490,55 @@
     transform: translateX(calc(-50%)); /* Adjust the scroll distance */
   }
 }
+.preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  transform: translateY(0);
+  transform-origin: 0 0;
+  color: #fff;
+  pointer-events: none;
+}
+/* .preloader-text{
+  opacity: 0;
+    translate: none;
+    rotate: none;
+    scale: none;
+    transform: scale(45, 45);
+}  */
+.preloader-text svg{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1111;
+    transform: scale(1.2);
+    animation-name: zoom-loader;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom-loader {
+  0%{
+    transform: scale(1.3);
+    /* transition-duration: 2s; */
+  }
+  20%{
+    transform: scale(1.3);
+  }
+  50%{
+    transform: scale(1.3);
+  }
+  80%{
+    transform: scale(4);
+  }
+  100%{
+    transform: scale(100);
+    display: none;
+  }
+}
+

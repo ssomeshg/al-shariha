@@ -25,6 +25,29 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="preloader">
+	<div class="preloader-text">
+		
+		<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<svg id="pre-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1922 1085">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff; 
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M1190.56,438.74h-22.42v30.58h22.42c5.43,0,9.51-1.23,12.23-3.69,2.71-2.46,4.08-6.33,4.08-11.59,0-4.75-1.4-8.49-4.2-11.21-2.8-2.71-6.84-4.08-12.1-4.08Z"/>
+  <polygon class="cls-1" points="983.93 501.92 1016.54 501.92 1000.24 451.73 983.93 501.92"/>
+  <polygon class="cls-1" points="263.15 501.92 295.76 501.92 279.45 451.73 263.15 501.92"/>
+  <path class="cls-1" d="M0,0v1085h1922V0H0ZM318.43,571.74l-8.92-27.26h-60.13l-8.92,27.26h-59.37l65.99-180.39h65.23l65.73,180.39h-59.62ZM501.88,571.74h-111.09v-180.39h56.56v137.58h54.52v42.8ZM694.24,545.62c-5.44,8.75-13.34,15.59-23.7,20.51-10.36,4.93-22.68,7.39-36.94,7.39-21.57,0-39.36-5.05-53.38-15.16-14.01-10.1-21.62-24.93-22.8-44.46h60.13c.85,10.36,5.43,15.54,13.76,15.54,3.06,0,5.65-.72,7.77-2.17,2.12-1.44,3.18-3.69,3.18-6.75,0-4.24-2.29-7.68-6.88-10.32-4.59-2.63-11.72-5.64-21.4-9.04-11.55-4.08-21.11-8.07-28.66-11.97-7.56-3.91-14.06-9.59-19.49-17.07-5.44-7.47-8.07-17.07-7.9-28.79,0-11.72,3.01-21.7,9.04-29.94,6.03-8.24,14.27-14.48,24.71-18.73,10.45-4.24,22.21-6.37,35.29-6.37,22.08,0,39.62,5.1,52.61,15.29s19.83,24.55,20.51,43.06h-60.89c-.17-5.1-1.45-8.75-3.82-10.96-2.38-2.21-5.27-3.31-8.66-3.31-2.38,0-4.33.81-5.86,2.42-1.53,1.62-2.29,3.87-2.29,6.75,0,4.08,2.25,7.43,6.75,10.06,4.5,2.64,11.68,5.82,21.53,9.55,11.38,4.25,20.77,8.32,28.15,12.23,7.39,3.91,13.8,9.34,19.24,16.31,5.43,6.97,8.15,15.71,8.15,26.24s-2.72,20.94-8.15,29.68ZM889.15,571.74h-56.56v-70.32h-53.76v70.32h-56.56v-180.39h56.56v64.97h53.76v-64.97h56.56v180.39ZM1039.22,571.74l-8.92-27.26h-60.13l-8.92,27.26h-59.37l65.99-180.39h65.22l65.74,180.39h-59.62ZM1202.28,571.74l-33.89-64.72h-.25v64.72h-56.56v-180.39h84.08c14.61,0,27.09,2.59,37.45,7.77,10.36,5.18,18.13,12.23,23.31,21.15,5.18,8.92,7.77,18.98,7.77,30.19,0,12.06-3.36,22.76-10.06,32.1-6.71,9.34-16.35,16.05-28.92,20.13l39.24,69.05h-62.17ZM1338.85,571.74h-56.56v-180.39h56.56v180.39ZM1531.21,571.74h-56.56v-70.32h-53.76v70.32h-56.56v-180.39h56.56v64.97h53.76v-64.97h56.56v180.39ZM1681.28,571.74l-8.92-27.26h-60.13l-8.92,27.26h-59.37l65.99-180.39h65.22l65.74,180.39h-59.62Z"/>
+  <polygon class="cls-1" points="1625.99 501.92 1658.6 501.92 1642.29 451.73 1625.99 501.92"/>
+</svg>
+
+	</div>
+</div>
+
+
 
 	<div class="wrap">
 		<div class="container">
@@ -339,11 +362,31 @@
 		</footer>
 
 		
+<script>
+	window.onload=()=>{
 		
+		let preoaderSvg = document.getElementById('pre-svg')
+		let sHeight = window.screen.height
+		let sWidth = window.screen.availWidth
+	
+		preoaderSvg.setAttribute("width",sWidth)
+		preoaderSvg.setAttribute("height",sHeight)
+		setTimeout(()=>{
+			preoaderSvg.style.opacity = 0
+		},2000)
+	}
+	
+	const wResize = window.addEventListener("resize",()=>{
+		
+		let loadingResize = true;
+		return loadingResize;
+		console.log(window.screen);
+		
+	
+	})
+	console.log(loadingFunction);
 
-		<!-- loader -->
-		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
+</script>
 		<script>
 			document.addEventListener("DOMContentLoaded", () => {
 			  const teamScroll = document.querySelector(".team-scroll");
